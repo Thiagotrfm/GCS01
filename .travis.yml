@@ -1,0 +1,13 @@
+language: python
+python:
+ - 3.5
+
+sudo: required
+dist: trusty
+
+install:
+ - pip install django flake8
+
+script:
+ - python manage.py migrate
+ - python manage.py teste
