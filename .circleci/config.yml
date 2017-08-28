@@ -30,7 +30,7 @@ jobs:
       - run:
           name: install dependencies
           command: |
-            pip install django flake8
+            sudo pip install django flake8
 
       - save_cache:
           paths:
@@ -41,8 +41,8 @@ jobs:
       - run:
           name: run tests
           command: |
-            python manage.py migrate
-            python manage.py test
+            sudo python manage.py migrate
+            sudo python manage.py test
 
       - store_artifacts:
           path: test-reports
