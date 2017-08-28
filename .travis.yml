@@ -14,8 +14,6 @@ script:
 
 deploy:
  provider: heroku
- api-key: e7af9dc7-3af3-4b59-9593-6fb1a7ddd43c
+ api-key: 
+	secure: e7af9dc7-3af3-4b59-9593-6fb1a7ddd43c
  app: gcs01-thiagofelix-travis
- run:
-  - python manage.py migrate
-  - python manage.py test
